@@ -4,13 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:background="@color/colorAccent"
+    android:gravity="center"
     tools:context="com.techeducation.groupmanager.StartActivity">
 
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/icon"
+        android:layout_margin="15dp"
+        />
+
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center_horizontal|center_vertical"
-        android:textSize="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:id="@+id/appName"
+        android:layout_margin="15dp"
+        android:textSize="30sp"
         android:text="Group Manager"/>
 </LinearLayout>

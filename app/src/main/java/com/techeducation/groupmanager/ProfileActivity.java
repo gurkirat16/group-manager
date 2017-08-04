@@ -107,7 +107,7 @@ public class ProfileActivity extends AppCompatActivity {
         }
 
         //if admin only then can edit profile
-        if(StartActivity.access==1 || user_id_other!=0){
+        if(StartActivity.access==1){
 
             Log.i("show","this is admin");
             toggleSuspend = (ToggleButton)findViewById(R.id.toggleSuspend);

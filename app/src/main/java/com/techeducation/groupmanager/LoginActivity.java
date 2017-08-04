@@ -132,11 +132,12 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                     try {
                         int status = jsonObject.getInt("error");
                         Log.i("show","status "+status);
-                        if(jsonObject.getInt("suspend")==1){
-                            Toast.makeText(LoginActivity.this, "Your access is suspended by admin", Toast.LENGTH_SHORT).show();
-                        }else{
-                            switch(status){
-                                case 0:
+
+                        switch(status){
+                            case 0:
+                                if(jsonObject.getInt("suspend")==1){
+                                    Toast.makeText(LoginActivity.this, "Your access is suspended by admin", Toast.LENGTH_SHORT).show();
+                                }else{
                                     Log.i("show","in switch status "+status);
                                     int access = jsonObject.getInt("access");
                                     int user_id = jsonObject.getInt("user_id");
@@ -157,19 +158,21 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                                         startActivity(i);
                                         finish();
                                     }
+                                }
 
-                                    break;
-                                case 1:
-                                    Toast.makeText(getApplicationContext(),jsonObject.getString("msg"),Toast.LENGTH_LONG).show();
-                                    break;
-                                case 2:
-                                    Toast.makeText(getApplicationContext(),jsonObject.getString("msg"),Toast.LENGTH_LONG).show();
-                                    break;
-                                case 3:
-                                    Toast.makeText(getApplicationContext(),jsonObject.getString("msg"),Toast.LENGTH_LONG).show();
-                                    break;
-                            }
+
+                                break;
+                            case 1:
+                                Toast.makeText(getApplicationContext(),jsonObject.getString("msg"),Toast.LENGTH_LONG).show();
+                                break;
+                            case 2:
+                                Toast.makeText(getApplicationContext(),jsonObject.getString("msg"),Toast.LENGTH_LONG).show();
+                                break;
+                            case 3:
+                                Toast.makeText(getApplicationContext(),jsonObject.getString("msg"),Toast.LENGTH_LONG).show();
+                                break;
                         }
+
 
                     } catch (JSONException e) {
                         e.printStackTrace();

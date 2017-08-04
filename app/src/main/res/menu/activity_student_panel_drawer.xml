@@ -4,20 +4,20 @@
     <group>
         <item
             android:id="@+id/evUserHistory"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/history"
             android:title="Events History" />
         <item
             android:id="@+id/viewUsers"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@drawable/group"
             android:title="View Users" />
         <item
             android:id="@+id/myProfile"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@drawable/user"
             android:title="My Profile" />
 
         <item
             android:id="@+id/logout"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/logout"
             android:title="Logout" />
     </group>
 

@@ -9,9 +9,9 @@
     <application
         android:name=".AppController"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/icon"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/icon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
@@ -55,9 +55,11 @@
             android:name=".StudentPanelActivity"
             android:label="@string/title_activity_student_panel"
             android:theme="@style/AppTheme" />
-        <activity android:name=".EventsHistoryActivity"
+        <activity
+            android:name=".EventsHistoryActivity"
             android:label="@string/events_history"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
+        <activity android:name=".NoConnection" />
     </application>
 
 </manifest>
